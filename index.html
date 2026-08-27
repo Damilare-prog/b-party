@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="B Party — Believe. Becoming. Books. Best. Whatever your B is, this is your party." />
+  <title>B PARTY — What's Your B?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#top">🅱️ PARTY</a>
+    <nav>
+      <a href="#about">ABOUT</a>
+      <a href="#tickets">TICKETS</a>
+      <a href="#influencers">INFLUENCERS</a>
+    </nav>
+    <a class="nav-cta" href="#tickets">GET TICKET</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE PARTY OF WHATEVER YOUR B IS</p>
+        <h1>WHAT'S<br><span>YOUR 🅱️?</span></h1>
+        <p class="hero-text">Believe. Becoming. Books. Best. Business. Balance. Blessings. Beyond. Your B can be anything.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#tickets">GET YOUR TICKET <span>↗</span></a>
+          <a class="button ghost" href="#about">DISCOVER THE B</a>
+        </div>
+      </div>
+      <div class="hero-b">
+        <div class="b-ring ring-one"></div><div class="b-ring ring-two"></div>
+        <div class="giant-b">B</div>
+        <div class="orbit orbit-one">BELIEVE</div>
+        <div class="orbit orbit-two">BECOMING</div>
+        <div class="orbit orbit-three">BEYOND</div>
+      </div>
+    </section>
+
+    <section class="ticker"><div>🅱️ BELIEVE&nbsp;&nbsp;&nbsp; 🅱️ BECOMING&nbsp;&nbsp;&nbsp; 🅱️ BOOKS&nbsp;&nbsp;&nbsp; 🅱️ BEST&nbsp;&nbsp;&nbsp; 🅱️ BUSINESS&nbsp;&nbsp;&nbsp; 🅱️ BEYOND&nbsp;&nbsp;&nbsp;</div></section>
+
+    <section class="about section" id="about">
+      <div class="section-label">01 / THE IDEA</div>
+      <div>
+        <h2>ONE LETTER.<br><em>INFINITE MEANINGS.</em></h2>
+        <p class="lead">We have been preaching the B all year. Now we're turning it into a night, a room, a community and an experience.</p>
+        <div class="b-grid">
+          <div><strong>🅱️elieve</strong><span>in what you're becoming.</span></div>
+          <div><strong>🅱️ecoming</strong><span>is the journey.</span></div>
+          <div><strong>🅱️ooks</strong><span>shape the mind.</span></div>
+          <div><strong>🅱️est</strong><span>is the standard.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tickets section" id="tickets">
+      <div class="section-label">02 / TICKETS</div>
+      <div class="ticket-wrap">
+        <div>
+          <p class="eyebrow">THREE WAVES. ONE NIGHT.</p>
+          <h2>GET IN<br><em>EARLY.</em></h2>
+          <p class="muted">Prices update automatically by date. If a wave sells out early, the next wave can be activated by the organisers.</p>
+        </div>
+        <div class="ticket-cards">
+          <article class="ticket-card" data-wave="early">
+            <span class="wave">WAVE 01</span><h3>EARLY BIRD</h3><div class="price">₦7,000</div><p>OCT 1 — OCT 20</p><button class="buy-btn" data-price="7000" data-type="Early Bird">BUY TICKET</button>
+          </article>
+          <article class="ticket-card active" data-wave="first">
+            <span class="wave">WAVE 02</span><h3>FIRST WAVE</h3><div class="price">₦10,000</div><p>OCT 21 — NOV 30</p><button class="buy-btn" data-price="10000" data-type="First Wave">BUY TICKET</button>
+          </article>
+          <article class="ticket-card" data-wave="second">
+            <span class="wave">WAVE 03</span><h3>SECOND WAVE</h3><div class="price">₦15,000</div><p>DEC 1 — EVENT DAY</p><button class="buy-btn" data-price="15000" data-type="Second Wave">BUY TICKET</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="referral section" id="influencers">
+      <div class="section-label">03 / REFERRALS</div>
+      <div class="referral-box">
+        <div><p class="eyebrow">BUILT FOR THE PEOPLE BRINGING THE PEOPLE</p><h2>EVERY 🅱️<br>HAS A <em>LINK.</em></h2></div>
+        <p class="lead">Every influencer gets a unique link. When their audience buys, the sale is attributed to them. Add your referral dashboard later without changing the public-facing site.</p>
+      </div>
+    </section>
+
+    <section class="question section">
+      <p class="eyebrow">ONE LAST THING</p>
+      <h2>SO... WHAT'S<br><em>YOUR 🅱️?</em></h2>
+      <div class="b-input"><input id="yourB" maxlength="40" placeholder="e.g. Business, Balance, Blessings..." /><button id="saveB">ADD YOUR B ↗</button></div>
+      <p id="bSaved" class="saved"></p>
+    </section>
+  </main>
+
+  <footer><div>🅱️ PARTY</div><p>BELIEVE. BECOMING. BOOKS. BEST. AND WHATEVER YOUR B IS.</p></footer>
+
+  <dialog id="checkoutModal">
+    <form method="dialog" id="checkoutForm">
+      <button class="close" value="cancel">×</button>
+      <p class="eyebrow">YOUR TICKET</p><h2 id="selectedType">FIRST WAVE</h2><div class="modal-price" id="selectedPrice">₦10,000</div>
+      <label>FULL NAME<input id="buyerName" required /></label>
+      <label>EMAIL<input id="buyerEmail" type="email" required /></label>
+      <label>PHONE<input id="buyerPhone" required /></label>
+      <label>QUANTITY<input id="quantity" type="number" min="1" max="10" value="1" required /></label>
+      <button class="button primary pay" type="submit">CONTINUE TO PAYSTACK ↗</button>
+      <small>Payments are processed securely by Paystack. Replace the public key in <code>script.js</code> before going live.</small>
+    </form>
+  </dialog>
+
+  <script src="https://js.paystack.co/v2/inline.js"></script>
+  <script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
