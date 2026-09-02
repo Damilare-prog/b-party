@@ -251,7 +251,10 @@
   }
   .hero-bg-b {
     position: absolute;
-    font-size: 70vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 55vw;
     font-weight: 900;
     color: rgba(196, 30, 58, 0.03);
     line-height: 1;
@@ -259,6 +262,8 @@
     pointer-events: none;
     animation: float 6s ease-in-out infinite;
     font-family: 'Space Grotesk', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .hero-label {
     font-family: 'Space Grotesk', sans-serif;
@@ -666,12 +671,17 @@
   }
   .cta-bg-b {
     position: absolute;
-    font-size: 80vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60vw;
     font-weight: 900;
     color: rgba(196, 30, 58, 0.02);
     line-height: 1;
     pointer-events: none;
     user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
   }
   .cta h2 {
     font-size: clamp(32px, 6vw, 72px);
@@ -776,6 +786,14 @@
     .hero-title .b-letter {
       padding: 0 10px;
       margin: 0 4px;
+    }
+    .hero-bg-b {
+      font-size: 80vw;
+      opacity: 0.4;
+    }
+    .cta-bg-b {
+      font-size: 90vw;
+      opacity: 0.3;
     }
     .b-grid { grid-template-columns: 1fr; }
     .exp-grid { grid-template-columns: 1fr; }
